@@ -101,6 +101,16 @@ public class Game : GameComponent,AStarServices {
         return nodes;
     }
 
+    private void ResetOpeneds()
+    {
+        for (int i = 0; i < pieces.GetLength(0); i++)
+        {
+            for (int j = 0; j < pieces.GetLength(1); j++)
+            {
+                pieces[i, j].icon.color = pieces[i,j].defaultColor;
+            }
+        }
+    }
 
     public void NotifyOpenPath(List<Node> nodes)
     {
@@ -111,11 +121,12 @@ public class Game : GameComponent,AStarServices {
     }
     public void NotifyMovement(Node playerNode)
     {
+        ResetOpeneds();
         SetPosition(player.GetComponent<RectTransform>(), playerNode.pos);
     }
 
     public void NotifyFoundTarget(Node targetNode)
     {
-
+        Debug.LogWarning("TARGET FOUND!");
     }
 }

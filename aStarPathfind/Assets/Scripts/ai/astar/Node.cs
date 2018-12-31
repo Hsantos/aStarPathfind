@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class Node
 {
-    public Vector3 pos { get; private set; }
-    public string value { get; private set; }
+    public Vector3 pos { get; set; }
+    public string value { get; set; }
     public int line { get; set; }
     public int collumn{ get; set; }
 
@@ -16,6 +16,14 @@ public class Node
         this.line = line;
         this.collumn = collumn;
         this.pos = pos;
+    }
+
+
+    public void SetValue(Node newNode)
+    {
+        value = newNode.value;
+        line = newNode.line;
+        collumn = newNode.collumn;
     }
 }
 
