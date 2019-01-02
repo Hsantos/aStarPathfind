@@ -26,4 +26,15 @@ public class Heuristic {
 
         return Math.Abs(x1 - x2) + Math.Abs(y1 - y2) + Math.Abs(z1 - z2);
     }
+
+
+
+    public int CalculateBlockDistances(Node[,] board,Vector3 node, Vector3 target, string invalidBlock)
+    {
+        int calc = 0;
+
+
+
+        return calc;
+    }
 }

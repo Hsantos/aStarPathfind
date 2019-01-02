@@ -10,5 +10,8 @@ public class Startup : MonoBehaviour {
     void Awake()
     {
         gameObject.AddComponent<Game>();   
+
+        //gameObject.AddComponent<TriangleExplosion>();
+        //StartCoroutine(gameObject.GetComponent<TriangleExplosion>().SplitMesh(true));
     }
 }
